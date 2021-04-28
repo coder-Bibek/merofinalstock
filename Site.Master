@@ -7,13 +7,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
-
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/css/style.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -38,34 +33,115 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+        <div id="wrapper">
+            <div class="overlay"></div>
+
+            <!-- Sidebar -->
+            <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
+                <div class="simplebar-content" style="padding: 0px;">
+                    <a class="text-nowrap sidebar-brand text-white font-weight-bolder text-decoration-none 
+                        font-larger text-uppercase text-wrap"
+                        href="/" style="font-size: 1.75rem; white-space: nowrap; white-space: pre">Mero <span class="text-danger font-weight-bolder text-uppercase">Stock</span>
+                    </a>
+
+                    <ul class="navbar-nav align-self-stretch">
+
+                        <li class="sidebar-header">Pages
+                        </li>
+                        <li class="">
+                            <a class="nav-link text-left active" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="flaticon-bar-chart-1"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>setting
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>invoice
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>Bank
+                            </a>
+                        </li>
+                        <li class="sidebar-header">tools and component
+                        </li>
+
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>ui element
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>form
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>table
+                            </a>
+                        </li>
+
+                        <li class="sidebar-header">tools and component
+                        </li>
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-bar-chart-1"></i>chart
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link text-left" role="button">
+                                <i class="flaticon-map"></i>map
+                            </a>
+                        </li>
                     </ul>
+                </div>
+            </nav>
+            <div id="page-content-wrapper">
+                <div id="content">
+                    <div class="container-fluid p-0 px-lg-0 px-md-0">
+                        <!-- Topbar -->
+                        <nav class=" navbar navbar-expand navbar-light my-navbar d-flex align-content-end justify-content-between">
+
+                            <!-- Sidebar Toggle (Topbar) -->
+                            <div type="button" id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed"
+                                data-toggle="offcanvas">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div>
+                                <a class="nav-link mx-lg-5" href="/dash/profile">
+                                    <i class="fas fa-user fa-2x text-secondary"></i>
+                                </a>
+                            </div>
+                        </nav>
+                        <!-- End of Topbar -->
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid px-lg-4">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
-
     </form>
+    <script>
+        $('#bar').click(function () {
+            $(this).toggleClass('open');
+            $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled');
+
+        });
+    </script>
+
 </body>
 </html>

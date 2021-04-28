@@ -72,3 +72,28 @@ D:\App development\Stock Management System\obj\Debug\Stock Management System.csp
 D:\App development\Stock Management System\obj\Debug\Stock Management System.csproj.CopyComplete
 D:\App development\Stock Management System\obj\Debug\Stock Management System.dll
 D:\App development\Stock Management System\obj\Debug\Stock Management System.pdb
+I:\Code\C#\cw2\bin\Stock Management System.dll.config
+I:\Code\C#\cw2\bin\Stock Management System.dll
+I:\Code\C#\cw2\bin\Stock Management System.pdb
+I:\Code\C#\cw2\bin\Antlr3.Runtime.dll
+I:\Code\C#\cw2\bin\AspNet.ScriptManager.bootstrap.dll
+I:\Code\C#\cw2\bin\AspNet.ScriptManager.jQuery.dll
+I:\Code\C#\cw2\bin\Microsoft.AspNet.FriendlyUrls.dll
+I:\Code\C#\cw2\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+I:\Code\C#\cw2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\Code\C#\cw2\bin\Microsoft.ScriptManager.MSAjax.dll
+I:\Code\C#\cw2\bin\Microsoft.ScriptManager.WebForms.dll
+I:\Code\C#\cw2\bin\Microsoft.Web.Infrastructure.dll
+I:\Code\C#\cw2\bin\Newtonsoft.Json.dll
+I:\Code\C#\cw2\bin\System.Web.Optimization.dll
+I:\Code\C#\cw2\bin\WebGrease.dll
+I:\Code\C#\cw2\bin\System.Web.Optimization.xml
+I:\Code\C#\cw2\bin\Newtonsoft.Json.xml
+I:\Code\C#\cw2\bin\Antlr3.Runtime.pdb
+I:\Code\C#\cw2\bin\Microsoft.AspNet.FriendlyUrls.xml
+I:\Code\C#\cw2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\Code\C#\cw2\obj\Debug\Stock Management System.csprojAssemblyReference.cache
+I:\Code\C#\cw2\obj\Debug\Stock Management System.csproj.CoreCompileInputs.cache
+I:\Code\C#\cw2\obj\Debug\Stock Management System.csproj.CopyComplete
+I:\Code\C#\cw2\obj\Debug\Stock Management System.dll
+I:\Code\C#\cw2\obj\Debug\Stock Management System.pdb
