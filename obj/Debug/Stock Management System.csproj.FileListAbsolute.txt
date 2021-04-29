@@ -71,3 +71,4 @@ D:\appdev\merofinalstock\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.
 D:\appdev\merofinalstock\obj\Debug\Stock Management System.csproj.CopyComplete
 D:\appdev\merofinalstock\obj\Debug\Stock Management System.dll
 D:\appdev\merofinalstock\obj\Debug\Stock Management System.pdb
+D:\appdev\merofinalstock\obj\Debug\Stock Management System.csprojAssemblyReference.cache

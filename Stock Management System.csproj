@@ -117,6 +117,7 @@
     <Content Include="dash\addProduct.aspx" />
     <Content Include="dash\profile.aspx" />
     <Content Include="dash\sales.aspx" />
+    <Content Include="dash\Salesview.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -204,6 +205,13 @@
     </Compile>
     <Compile Include="dash\sales.aspx.designer.cs">
       <DependentUpon>sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dash\Salesview.aspx.cs">
+      <DependentUpon>Salesview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dash\Salesview.aspx.designer.cs">
+      <DependentUpon>Salesview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
