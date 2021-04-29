@@ -1,8 +1,4 @@
-﻿<%@ Page Title="Add Product" Language="C#" 
-    MasterPageFile="~/Site.Master" 
-    AutoEventWireup="true" 
-    CodeBehind="addmember.aspx.cs" 
-    Inherits="Stock_Management_System._Default" %>
+﻿<%@ Page Title="Add Product" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addmember.aspx.cs" Inherits="Stock_Management_System._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="card mt-4 py-2" style="overflow: hidden">
