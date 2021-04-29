@@ -18,16 +18,16 @@
                         </div>
                         <div class="row text-start">
                             <div class="col-sm-12 col-md-6 text-muted mb-3">
-                                Name: <span class="text-dark font-weight-bold">John Doe</span>
+                                Name: <span class="text-dark font-weight-bold" id="nameTxt" runat="server"></span>
                             </div>
                             <div class="col-sm-12 col-md-6 text-muted mb-3 text-end">
-                                Username: <span class="text-dark font-weight-bold">johndoe</span>
+                                Username: <span class="text-dark font-weight-bold" id="UsernameTxt" runat="server"></span>
                             </div>
                             <div class="col-sm-12 col-md-6 text-muted mb-3 ">
-                                Email: <span class="text-dark font-weight-bold">johndoe@gmail.com</span>
+                                Email: <span class="text-dark font-weight-bold" id="emailTxt" runat="server"></span>
                             </div>
                             <div class="col-sm-12 col-md-6 text-muted mb-3 text-end">
-                                Phone: <span class="text-dark font-weight-bold">9810111213</span>
+                                Phone: <span class="text-dark font-weight-bold" id="phoneTxt" runat="server"></span>
                             </div>
                         </div>
                     </div>

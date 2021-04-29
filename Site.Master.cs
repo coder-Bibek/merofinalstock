@@ -16,5 +16,11 @@ namespace Stock_Management_System
                 Response.Redirect("/Loginscreen");
             }
         }
+
+        protected void Logoutbtn_Click(object sender, ImageClickEventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("/Loginscreen");
+        }
     }
 }

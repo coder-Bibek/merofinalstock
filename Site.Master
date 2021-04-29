@@ -117,8 +117,9 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div>
-                                <a class="nav-link mx-lg-5" href="/dash/profile">
+                            <div class="d-flex justify-content-between align-content-end py-2">
+                                <asp:ImageButton ImageUrl="~/assets/images/logout.svg" runat="server" CssClass="btn btn-link p-0" Height="30px" ID="Logoutbtn" OnClick="Logoutbtn_Click" />
+                                <a class="nav-link mx-lg-5 p-0" href="/dash/profile">
                                     <i class="fas fa-user fa-2x text-secondary"></i>
                                 </a>
                             </div>
