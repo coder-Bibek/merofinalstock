@@ -11,7 +11,10 @@ namespace Stock_Management_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user_email"]==null)
+            {
+                Response.Redirect("/Loginscreen");
+            }
         }
     }
 }
