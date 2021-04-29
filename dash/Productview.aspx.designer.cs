@@ -11,17 +11,17 @@ namespace Stock_Management_System.dash
 {
 
 
-    public partial class Salesview
+    public partial class Productview
     {
 
         /// <summary>
-        /// customer control.
+        /// item control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList customer;
+        protected global::System.Web.UI.WebControls.DropDownList item;
 
         /// <summary>
         /// Searchbtn control.
