@@ -11,7 +11,7 @@ namespace Stock_Management_System.dash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
