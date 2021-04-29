@@ -22,7 +22,7 @@ namespace Stock_Management_System.Screens
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             try {
-                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string useremail = txtEmail.Text.Trim();
