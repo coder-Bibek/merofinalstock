@@ -25,7 +25,7 @@ namespace Stock_Management_System.dash
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string email = Session["user_email"].ToString();
@@ -66,7 +66,7 @@ namespace Stock_Management_System.dash
             {
                 try
                 {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                    using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
                     {
                         con.Open();
                         string email = Session["user_email"].ToString();
