@@ -22,17 +22,17 @@
                         <i class="fa fa-user" style="color: white"></i>
                         <p class="form-label" style="color: white; margin-top: -2px; font-size: .875rem; margin-left: 5px">Email</p>
                     </div>
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="w-100 form-control" placeholder="email" />
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="w-100 form-control" placeholder="email" TextMode="Email"/>
                     <div class="d-flex align-items-center flex-row">
                         <i class="fa fa-lock mt-2" style="color: white"></i>
                         <p class="form-label " style="color: white; margin-left: 5px; font-size: .875rem; margin-top: 18px; font-family: sans-serif">Password</p>
                     </div>
-                    <asp:TextBox ID="txtPassword" runat="server" CssClass="w-100 form-control" placeholder="password" />
+                    <asp:TextBox ID="txtPassword" runat="server" CssClass="w-100 form-control" placeholder="password" TextMode="Password" />
                     <%--  <button class="btn w-100 my-4" style="margin-top: 30px !important;background-color: #5e6ea7;color:white" id="liveToastBtn" onclick="Mylogin()" disabled>Login</button>--%>
-                    <asp:Button Text="Login" CssClass="btn w-100 mt-4" Style="background-color: #5e6ea7" runat="server" ID="btnLogin" OnClick="btnLogin_Click" />
+                    <asp:Button Text="Login" CssClass="btn w-100 mt-4 text-white" Style="background-color: #5e6ea7" runat="server" ID="btnLogin"  OnClick="btnLogin_Click" />
                     <div class="alert alert-danger text-center alert-dismissible fade show mt-4" id="alertbox" role="alert" runat="server">
                         <strong>Invalid Email/Password</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <%--<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>--%>
                     </div>
                 </div>
             </div>
