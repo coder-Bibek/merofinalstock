@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Stock_Management_System.dash
 {
-    public partial class addcustomer : System.Web.UI.Page
+    public partial class Salesview : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="d-inline">
-                        <asp:Button ID="addProduct" runat="server" Text="Add Product" CssClass="btn btn-primary" />
+                        <asp:Button ID="addProduct" runat="server" Text="Add Product" CssClass="btn btn-primary" OnClick="addProduct_Click" />
                         <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" />
                     </div>
                 </div>
