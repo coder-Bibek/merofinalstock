@@ -39,16 +39,19 @@
                         <h5 class="card-title py-3 px-4 border-bottom">Change Password</h5>
                         <div class="py-3 px-4">
                             <div class="form-group mb-3">
-                                <asp:TextBox CssClass="form-control" runat="server" placeholder="Current Password"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" runat="server" placeholder="Current Password" ID="crntPwd"></asp:TextBox>
                             </div>
                             <div class="form-group mb-3">
-                                <asp:TextBox CssClass="form-control" runat="server" placeholder="New Password"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" runat="server" placeholder="New Password" ID="newPwd"></asp:TextBox>
                             </div>
                             <div class="form-group mb-3">
-                                <asp:TextBox CssClass="form-control" runat="server" placeholder="Confirm Password"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" runat="server" placeholder="Confirm Password" ID="conPwd"></asp:TextBox>
+                            </div>
+                            <div class="alert alert-danger text-center alert-dismissible fade show mt-4" id="alertbox" role="alert" runat="server">
                             </div>
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-block">Change</button>
+                              <%--  <asp:button class="btn btn-primary btn-block">Change</asp:button>--%>
+                                <asp:Button Text="Change" CssClass="btn btn-primary btn-block" runat="server" ID="Changepwdbtn" OnClick="Changepwdbtn_Click" />
                             </div>
                         </div>
                     </div>
