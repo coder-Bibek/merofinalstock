@@ -67,40 +67,45 @@ namespace Stock_Management_System.dash
         protected void addProduct_Click(object sender, EventArgs e)
         {
 
-            string item_name = itemName.Text.Trim();
-            int item_price = Convert.ToInt32(price.Text.Trim());
-            string item_description = description.Text.Trim().ToString();
-            int item_quantity =Convert.ToInt32( stockquantity.Text.Trim());
-            string item_categories = category.SelectedItem.ToString();
-            string  item_ManuDate= manufactureDate.Text.Trim().ToString();
-            string  item_ExpDate= expiryDate.Text.Trim().ToString();
+            
 
-          
+                string item_name = itemName.Text.Trim();
+                int item_price = Convert.ToInt32(price.Text.Trim());
+                string item_description = description.Text.Trim().ToString();
+                int item_quantity = Convert.ToInt32(stockquantity.Text.Trim());
+                string item_categories = category.SelectedItem.ToString();
+                string item_ManuDate = manufactureDate.Text.Trim().ToString();
+                string item_ExpDate = expiryDate.Text.Trim().ToString();
 
-            try { 
-            using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+
+
+            try
             {
-                con.Open();
-                    string stquery = "INSERT INTO [dbo].[inventory]([item_name],[item_desc],[item_price],[category_name],[manufacture_date],[expiry_date],[user_id],[available_status],[stock_quantity])VALUES('"+item_name+ "','" + item_description + "',"+ item_price+",'"+item_categories+"','"+item_ManuDate+"','"+item_ExpDate+"',"+user_id+",'y',"+item_quantity+")";
-                SqlCommand cmd = new SqlCommand(stquery, con);
+                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                {
+                    con.Open();
+                    string stquery = "INSERT INTO [dbo].[inventory]([item_name],[item_desc],[item_price],[category_name],[manufacture_date],[expiry_date],[user_id],[available_status],[stock_quantity],[status_delete])VALUES('" + item_name + "','" + item_description + "'," + item_price + ",'" + item_categories + "','" + item_ManuDate + "','" + item_ExpDate + "'," + user_id + ",'y'," + item_quantity + ",0)";
+                    SqlCommand cmd = new SqlCommand(stquery, con);
                     cmd.ExecuteNonQuery();
-                con.Close();
+                    con.Close();
 
-                alertbox.Visible = true;
-                alertbox.Attributes.Add("style", "background-color:#d1e7dd;color:#842029");
-                alertbox.InnerText = "Product Added Succesfully";
+                    alertbox.Visible = true;
+                    alertbox.Attributes.Add("style", "background-color:#d1e7dd;color:#842029");
+                    alertbox.InnerText = "Product Added Succesfully";
+                }
             }
-            }catch(Exception exp)
+            catch (Exception exp)
             {
                 alertbox.Visible = true;
                 alertbox.InnerText = exp.Message;
             }
+            
+            
         }
 
         protected void addCaterogyButton_Click(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+    
                 string category_name = categoryName.Text.Trim();
                 using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
@@ -113,7 +118,7 @@ namespace Stock_Management_System.dash
                     categoryalert.InnerText = "Category added successfully";
                     con.Close();
 
-                }
+                
             }
         }
     }

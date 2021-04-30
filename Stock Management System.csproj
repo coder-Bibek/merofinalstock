@@ -113,7 +113,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="dash\addmember.aspx" />
+    <Content Include="dash\addMember.aspx" />
     <Content Include="dash\addProduct.aspx" />
     <Content Include="dash\Productview.aspx" />
     <Content Include="dash\profile.aspx" />
@@ -179,12 +179,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dash\addmember.aspx.cs">
-      <DependentUpon>addmember.aspx</DependentUpon>
+    <Compile Include="dash\addMember.aspx.cs">
+      <DependentUpon>addMember.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dash\addmember.aspx.designer.cs">
-      <DependentUpon>addmember.aspx</DependentUpon>
+    <Compile Include="dash\addMember.aspx.designer.cs">
+      <DependentUpon>addMember.aspx</DependentUpon>
     </Compile>
     <Compile Include="dash\addProduct.aspx.cs">
       <DependentUpon>addProduct.aspx</DependentUpon>

@@ -16,7 +16,7 @@
         </div>
         <div class="row p-3">
         <div class="table-responsive">
-        <asp:GridView ID="GridView1" CssClass="table py-0 text-dark mt-3" runat="server">
+        <asp:GridView ID="GridView1" CssClass="table py-0 text-dark mt-3" runat="server" AllowPaging="true">
 
         </asp:GridView>
             </div>

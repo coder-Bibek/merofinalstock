@@ -45,18 +45,19 @@
 
                     <ul class="navbar-nav align-self-stretch">
                         <li class="">
-                            <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false" href="/">
                                 <i class="flaticon-bar-chart-1"></i>Dashboard
                             </a>
                         </li>
 
-                        <li class="">
-                            <a class="nav-link text-left" role="button" href="/dash/sales">
-                                <i class="flaticon-bar-chart-1"></i>Sales
-                            </a>
-                        </li>
+                      
 
                         <li class="sidebar-header">Pages
+                        </li>
+                          <li class="">
+                            <a class="nav-link text-left" role="button" href="/dash/sales">
+                                <i class="flaticon-bar-chart-1"></i>Add Sales
+                            </a>
                         </li>
                         <li class="">
                             <a class="nav-link text-left" role="button" href="/dash/addProduct">

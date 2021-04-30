@@ -12,7 +12,8 @@ namespace Stock_Management_System.dash
 {
     public partial class Salesview : System.Web.UI.Page
     {
-        
+        string maindat = "";
+        int maindate = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             getCustomer();
@@ -28,7 +29,7 @@ namespace Stock_Management_System.dash
                     using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                     {
                         con.Open();
-                        string stquery = "SELECT * from sales";
+                        string stquery = "SELECT * from sales ";
                         SqlCommand cmd = new SqlCommand(stquery, con);
                         customer.DataTextField = "cust_name";
                         customer.DataValueField = "sales_id";
@@ -55,7 +56,7 @@ namespace Stock_Management_System.dash
                 {
                     con.Open();
                   
-                    string stquery = "SELECT * from sales";
+                    string stquery = "SELECT * from sales ";
                     SqlCommand cmd = new SqlCommand(stquery, con);
                    using(SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -79,14 +80,17 @@ namespace Stock_Management_System.dash
         {
             try
             {
+               
                 string customername = customer.SelectedItem.ToString();
                 System.Diagnostics.Debug.WriteLine(customername);
                 DataTable dt = new DataTable();
+                int day = Convert.ToInt32(DateTime.Today.ToString("dd"));
+
                 using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
 
-                    string stquery = "SELECT * from sales WHERE cust_name = '"+customername+"' ";
+                    string stquery = "SELECT * from sales WHERE cust_name = '" + customername + "' and DAY(purchase_date) >= '"+(day-31).ToString()+"' ";
                     SqlCommand cmd = new SqlCommand(stquery, con);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {

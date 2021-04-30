@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="d-inline">
-                        <asp:Button ID="addProduct" ValidationGroup='valGroup1' runat="server" Text="Add Product" CssClass="btn btn-primary" OnClick="addProduct_Click" />
+                        <asp:Button ID="addProducts" ValidationGroup='valGroup1' runat="server" Text="Add Product" CssClass="btn btn-primary" OnClick="addProduct_Click" />
                     </div>
                 </div>
             </div>
@@ -101,15 +101,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        var myModal = document.getElementById('myModal')
-        var myInput = document.getElementById('categoryName')
-
-        myModal.addEventListener('shown.bs.modal', function () {
-            myInput.focus()
-        })
-    </script>
 
     <script>
         var myModal = document.getElementById('myModal')
