@@ -40,5 +40,5 @@ namespace Stock_Management_System.dash
                 System.Diagnostics.Debug.WriteLine(excep);
             }
         }
-    }
+        }
 }
