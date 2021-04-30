@@ -7,19 +7,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Stock_Management_System
+namespace Stock_Management_System.dash
 {
-    public partial class SiteMaster : MasterPage
+    public partial class viewMember : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (Session["user_email"]==null)
-            {
-                Response.Redirect("/Loginscreen");
-            }
-        }
-
-        private void getStockOutofDate()
         {
             try
             {
@@ -27,35 +19,22 @@ namespace Stock_Management_System
                 using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
-                    string stquery = "SELECT item_name from inventory where status_delete = 0 and stock_quantity < 10";
+                    string stquery = "SELECT * from customer";
                     SqlCommand cmd = new SqlCommand(stquery, con);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         dt.Load(reader);
                     }
+
                     con.Close();
                     GridView1.DataSource = dt;
                     GridView1.DataBind();
                 }
+
             }
             catch (Exception excep)
             {
                 System.Diagnostics.Debug.WriteLine(excep);
-            }
-        }
-
-        protected void Logoutbtn_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Response.Redirect("/Loginscreen");
-        }
-        protected void notificationButton_click(object sender, EventArgs e)
-        {
-            //notificationDot.Visible=false
-            //notificationDot.Visible = false;
-            if (!IsPostBack)
-            {
-                notificationDot.Visible = false;
             }
         }
     }

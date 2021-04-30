@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Product" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addmember.aspx.cs" Inherits="Stock_Management_System._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" masterpagefile="~/site.master" CodeBehind="addMember.aspx.cs" Inherits="Stock_Management_System.dash.addMember" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="card mt-4 py-2" style="overflow: hidden">
@@ -31,7 +31,7 @@
                     <div class="col-md-6 col-sm-12 ">
                         <div class="form-group">
                             <div class="form-label text-muted">Contact Number</div>
-                            <asp:TextBox ID="contactNumber" runat="server" class="form-control" type="date"></asp:TextBox>
+                            <asp:TextBox ID="contactNumber" runat="server" class="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 mb-3">
@@ -44,13 +44,13 @@
                         <div class="alert alert-danger text-center alert-dismissible fade show mt-4" id="alertbox" role="alert" runat="server">
                         </div>
                     </div>
-                    
                     <div class="d-inline">
-                        <asp:Button ID="addMember" runat="server" Text="Add Member" CssClass="btn btn-primary" OnClick="addMember_Click" />
-                        <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" />
+                        <asp:Button ID="addMemberButton" runat="server" Text="Add Member" CssClass="btn btn-primary" OnClick="addMember_click" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </asp:Content>
+
+

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stock_Management_System
+namespace Stock_Management_System.dash
 {
 
 
-    public partial class _Default
+    public partial class addMember
     {
 
         /// <summary>
@@ -69,21 +69,12 @@ namespace Stock_Management_System
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertbox;
 
         /// <summary>
-        /// addMember control.
+        /// addMemberButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addMember;
-
-        /// <summary>
-        /// cancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cancel;
+        protected global::System.Web.UI.WebControls.Button addMemberButton;
     }
 }
