@@ -69,23 +69,19 @@
                                 <i class="flaticon-bar-chart-1"></i>Add Member
                             </a>
                         </li>
-                        <li class="">
-                            <a class="nav-link text-left" role="button">
-                                <i class="flaticon-bar-chart-1"></i>Bank
-                            </a>
-                        </li>
-                        <li class="sidebar-header">tools and component
+    
+                        <li class="sidebar-header">Report
                         </li>
 
                         <li class="">
-                            <a class="nav-link text-left" role="button">
-                                <i class="flaticon-bar-chart-1"></i>ui element
+                            <a class="nav-link text-left" role="button" href="/dash/Salesview">
+                                <i class="flaticon-bar-chart-1"></i>View Sales
                             </a>
                         </li>
 
                         <li class="">
-                            <a class="nav-link text-left" role="button">
-                                <i class="flaticon-bar-chart-1"></i>form
+                            <a class="nav-link text-left" role="button" href="/dash/Productview">
+                                <i class="flaticon-bar-chart-1"></i>View Inventory
                             </a>
                         </li>
                         <li class="">

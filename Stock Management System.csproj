@@ -116,6 +116,7 @@
     <Content Include="dash\addCategory.aspx" />
     <Content Include="dash\addmember.aspx" />
     <Content Include="dash\addProduct.aspx" />
+    <Content Include="dash\Productview.aspx" />
     <Content Include="dash\profile.aspx" />
     <Content Include="dash\sales.aspx" />
     <Content Include="dash\Salesview.aspx" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="dash\addProduct.aspx.designer.cs">
       <DependentUpon>addProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dash\Productview.aspx.cs">
+      <DependentUpon>Productview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dash\Productview.aspx.designer.cs">
+      <DependentUpon>Productview.aspx</DependentUpon>
     </Compile>
     <Compile Include="dash\profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>
