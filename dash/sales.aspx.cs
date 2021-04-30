@@ -113,7 +113,7 @@ namespace Stock_Management_System.dash
                 using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
-                    string stquery = "SELECT stock_quantity FROM inventory WHERE item_name = '" + invent_name + "'";
+                    string stquery = "SELECT stock_quantity FROM inventory WHERE item_name = '" + invent_name + "' and status_delete = 0";
                     SqlCommand cmd = new SqlCommand(stquery, con);
                     quanity = Convert.ToInt32(cmd.ExecuteScalar());
                     con.Close();

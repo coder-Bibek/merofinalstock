@@ -28,7 +28,7 @@ namespace Stock_Management_System
                 using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
-                    string stquery = "SELECT item_name from inventory where status_delete = 0 and stock_quantity < 10";
+                    string stquery = "SELECT item_name 'Item less than 10' from inventory where status_delete = 0 and stock_quantity < 10";
                     SqlCommand cmd = new SqlCommand(stquery, con);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {

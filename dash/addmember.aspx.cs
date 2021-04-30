@@ -55,15 +55,12 @@ namespace Stock_Management_System.dash
             string cust_email = Email.Text.Trim();
             string cust_phone = contactNumber.Text.Trim();
             string member_type = memberType.SelectedItem.ToString();
-            string email = Session["user_email"].ToString();
             try
             {
                 using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
-                    int user_id = GetUserId.GetUserid(email);
-                    string stquery = "INSERT INTO [dbo].[customer] ([cust_name],[cust_address],[cust_contactno],[cust_email],[member_type],[user_id])VALUES" +
-                    $"('{cust_Name}','{cust_address}','{cust_phone}','{cust_email}','{member_type}','{user_id}')";
+                    string stquery = "INSERT INTO [dbo].[customer] ([cust_name],[cust_address],[cust_contactno],[cust_email],[member_type],[user_id])VALUES('"+cust_Name+"','"+cust_address+ "','" + cust_phone + "','" + cust_email+"','"+member_type+"',"+user_id+")";
                     SqlCommand cmd = new SqlCommand(stquery, con);
                     cmd.ExecuteNonQuery();
                     con.Close();

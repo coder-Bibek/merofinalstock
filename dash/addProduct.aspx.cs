@@ -24,7 +24,7 @@ namespace Stock_Management_System.dash
                 alertbox.Visible = false;
                 try
                 {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
+                    using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                     {
                         con.Open();
                         string stquery = "SELECT * FROM category";
@@ -48,7 +48,7 @@ namespace Stock_Management_System.dash
             try
             {
                 string email = Session["user_email"].ToString();
-                using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string stquery = "SELECT user_id FROM user_details where user_email = '"+email+"'";
@@ -106,7 +106,7 @@ namespace Stock_Management_System.dash
         {
     
                 string category_name = categoryName.Text.Trim();
-                using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string stquery = "INSERT INTO [dbo].[category]([category_name],[user_id])VALUES('" + category_name + "'," + user_id + ")";

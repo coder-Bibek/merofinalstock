@@ -135,7 +135,7 @@
                                         <li><a class="dropdown-item" href="#">Separated link</a></li>
                                     </ul>--%>
                                     <div class="dropdown-menu">
-                                        <asp:gridview id="GridView1" runat="server" cssclass="table"></asp:gridview>
+                                        <asp:gridview id="GridView1" runat="server" cssclass="table border-0"></asp:gridview>
                                     </div>
                                 </div>
                                 <a class="btn btn-link bg-light p-1 rounded-circle text-secondary" style="height: 35px; width: 35px" href="/dash/profile">
