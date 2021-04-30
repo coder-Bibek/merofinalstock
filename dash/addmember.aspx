@@ -40,14 +40,13 @@
                             <asp:DropDownList ID="memberType" runat="server" CssClass="form-select"></asp:DropDownList>
                         </div>
                     </div>
-                    <%-- <div class="col-sm-12 mb-1">
+                     <div class="col-sm-12 mb-1">
                         <div class="alert alert-danger text-center alert-dismissible fade show mt-4" id="alertbox" role="alert" runat="server">
                         </div>
-                    </div>--%>
-                    <div class="alert alert-primary text-center alert-dismissible fade show mt-4" id="categoryalert"  role="alert" runat="server">
-                     </div>
+                    </div>
+                    
                     <div class="d-inline">
-                        <asp:Button ID="addMember" runat="server" Text="Add Member" CssClass="btn btn-primary" />
+                        <asp:Button ID="addMember" runat="server" Text="Add Member" CssClass="btn btn-primary" OnClick="addMember_Click" />
                         <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" />
                     </div>
                 </div>
