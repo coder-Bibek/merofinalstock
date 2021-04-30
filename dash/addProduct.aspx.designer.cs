@@ -147,6 +147,24 @@ namespace Stock_Management_System.dash
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addProducts;
+        protected global::System.Web.UI.WebControls.Button addProduct;
+
+        /// <summary>
+        /// categoryName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox categoryName;
+
+        /// <summary>
+        /// addCaterogyButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addCaterogyButton;
     }
 }

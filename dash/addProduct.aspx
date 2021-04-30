@@ -3,8 +3,11 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="card mt-4 py-2" style="overflow: hidden">
         <div class="row border-bottom">
-            <div class="col-lg-12">
-                <h3 class="px-3">Add Product</h3>
+            <div class="col-lg-12 px-4 py-1 pb-2">
+                <div class="d-flex justify-content-between align-content-center">
+                    <h3>Add Product</h3>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#myModal">Add Category</button>
+                </div>
             </div>
         </div>
         <div class="row p-3">
@@ -69,4 +72,34 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="form-label text-muted">Category Name</div>
+                        <asp:TextBox ID="categoryName" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <asp:Button ID="addCaterogyButton" runat="server" Text="Add " CssClass="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('categoryName')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
+
 </asp:Content>
