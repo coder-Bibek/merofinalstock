@@ -8,13 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../loginscreen.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="assets/images/logo.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <form runat="server">
-        
         <div class="container main-container">
-            
             <div class="card p-3 mb-2 w-100 mx-1" style="width: 25rem; background-color: #333a56; box-shadow: 0px 0px 10px">
                 <div class="card-body">
                     <div class="d-flex justify-content-center flex-row align-items-center" style="padding-bottom: 20px">

@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mero Stock</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/images/logo.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
@@ -70,7 +70,7 @@
                                 <i class="flaticon-bar-chart-1"></i>Add Member
                             </a>
                         </li>
-    
+
                         <li class="sidebar-header">Report
                         </li>
 
@@ -86,8 +86,8 @@
                             </a>
                         </li>
                         <li class="">
-                            <a class="nav-link text-left" role="button">
-                                <i class="flaticon-bar-chart-1"></i>table
+                            <a class="nav-link text-left" role="button" href="/dash/viewMember">
+                                <i class="flaticon-bar-chart-1"></i>View Member
                             </a>
                         </li>
 
@@ -113,17 +113,37 @@
                         <nav class=" navbar navbar-expand navbar-light my-navbar d-flex align-content-end justify-content-between">
 
                             <!-- Sidebar Toggle (Topbar) -->
-                            <div type="button" id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed"
+                            <div id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed"
                                 data-toggle="offcanvas">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div class="d-flex justify-content-between align-content-end py-2">
-                                <asp:ImageButton ImageUrl="~/assets/images/logout.svg" runat="server" CssClass="btn btn-link p-0" Height="30px" ID="Logoutbtn" OnClick="Logoutbtn_Click" />
-                                <a class="nav-link mx-lg-5 p-0" href="/dash/profile">
-                                    <i class="fas fa-user fa-2x text-secondary"></i>
+                            <div class="d-flex justify-content-between align-content-end py-2 mx-lg-5">
+                                <div class="dropdown">
+                                    <button style="height: 35px; width: 35px" class="btn btn-link bg-light p-1 rounded-circle text-secondary mx-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-bell"></i>
+                                    </button>
+
+                                    <%--<ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>--%>
+                                    <div class="dropdown-menu">
+                                        <asp:gridview id="GridView1" runat="server" cssclass="table"></asp:gridview>
+                                    </div>
+                                </div>
+                                <a class="btn btn-link bg-light p-1 rounded-circle text-secondary" style="height: 35px; width: 35px" href="/dash/profile">
+                                    <i class="fas fa-user"></i>
                                 </a>
+                                <asp:LinkButton ID="Logoutbtn" Height="35px" Width="35px" runat="server" CssClass=" mx-3 btn btn-link bg-light p-1 rounded-circle text-secondary" OnClick="Logoutbtn_Click">
+                                    <i class="fas fa-sign-out-alt"></i>                                    
+                                </asp:LinkButton>
                             </div>
                         </nav>
                         <!-- End of Topbar -->
@@ -142,8 +162,11 @@
         $('#bar').click(function () {
             $(this).toggleClass('open');
             $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled');
-
         });
+        function preventReload(e) {
+            e.preventDefault();
+            document.getElementById("notificationDot").style.display = "none";
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

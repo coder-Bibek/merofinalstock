@@ -24,7 +24,7 @@ namespace Stock_Management_System.dash
                 alertbox.Visible = false;
                 try
                 {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                    using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
                     {
                         con.Open();
                         string stquery = "SELECT * FROM category";
@@ -48,7 +48,7 @@ namespace Stock_Management_System.dash
             try
             {
                 string email = Session["user_email"].ToString();
-                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string stquery = "SELECT user_id FROM user_details where user_email = '"+email+"'";
@@ -79,13 +79,12 @@ namespace Stock_Management_System.dash
 
 
 
-            try
+            try { 
+            using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
             {
-                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
-                {
-                    con.Open();
-                    string stquery = "INSERT INTO [dbo].[inventory]([item_name],[item_desc],[item_price],[category_name],[manufacture_date],[expiry_date],[user_id],[available_status],[stock_quantity],[status_delete])VALUES('" + item_name + "','" + item_description + "'," + item_price + ",'" + item_categories + "','" + item_ManuDate + "','" + item_ExpDate + "'," + user_id + ",'y'," + item_quantity + ",0)";
-                    SqlCommand cmd = new SqlCommand(stquery, con);
+                con.Open();
+                    string stquery = "INSERT INTO [dbo].[inventory]([item_name],[item_desc],[item_price],[category_name],[manufacture_date],[expiry_date],[user_id],[available_status],[stock_quantity])VALUES('"+item_name+ "','" + item_description + "',"+ item_price+",'"+item_categories+"','"+item_ManuDate+"','"+item_ExpDate+"',"+user_id+",'y',"+item_quantity+")";
+                SqlCommand cmd = new SqlCommand(stquery, con);
                     cmd.ExecuteNonQuery();
                     con.Close();
 
@@ -107,7 +106,7 @@ namespace Stock_Management_System.dash
         {
     
                 string category_name = categoryName.Text.Trim();
-                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string stquery = "INSERT INTO [dbo].[category]([category_name],[user_id])VALUES('" + category_name + "'," + user_id + ")";

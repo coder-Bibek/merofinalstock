@@ -132,7 +132,7 @@ namespace Stock_Management_System.dash
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertbox;
 
         /// <summary>
-        /// addProducts control.
+        /// addProduct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

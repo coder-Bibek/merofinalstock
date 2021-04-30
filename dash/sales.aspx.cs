@@ -43,7 +43,7 @@ namespace Stock_Management_System.dash
                     product.DataSource = cmd.ExecuteReader();
                     product.DataBind();
                     con.Close();
-                    
+
                 }
 
             }
@@ -125,7 +125,7 @@ namespace Stock_Management_System.dash
                 System.Diagnostics.Debug.WriteLine(excep);
             }
 
-            if (quantity_total > quanity || quantity_total < 0)
+            if (quantity_total > quanity || quantity_total <= 0)
             {
                 salesbox.Visible = true;
                 salesbox.InnerText = "Available Quantity is less than Required quantity";

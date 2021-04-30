@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\logo.ico" />
     <Content Include="assets\images\logout.svg" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -119,6 +120,7 @@
     <Content Include="dash\profile.aspx" />
     <Content Include="dash\sales.aspx" />
     <Content Include="dash\Salesview.aspx" />
+    <Content Include="dash\viewMember.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -221,6 +223,13 @@
     <Compile Include="dash\Salesview.aspx.designer.cs">
       <DependentUpon>Salesview.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dash\viewMember.aspx.cs">
+      <DependentUpon>viewMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dash\viewMember.aspx.designer.cs">
+      <DependentUpon>viewMember.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +237,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GetUserId.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
