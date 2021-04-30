@@ -16,7 +16,7 @@ namespace Stock_Management_System.dash
             try
             {
                 DataTable dt = new DataTable();
-                using (SqlConnection con = new SqlConnection(@"Data Source=Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection(@"Data Source=BIBEKBIDARI-PC;Initial Catalog=mero_stock;Integrated Security=True"))
                 {
                     con.Open();
                     string stquery = "SELECT * from customer";
